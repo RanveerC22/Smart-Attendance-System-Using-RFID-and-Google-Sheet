@@ -2,7 +2,7 @@
 
 The project is used to record the attendance of the student with the help of RFID and when the RFID is scanned the attendance will be recorded on Google-sheet via NodeMCU.
 
-Roles & Responsibilities:
+Process:
 
 • Role is to record the attendance of the students and to make teachers work easy.
 
