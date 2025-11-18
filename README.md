@@ -1,13 +1,56 @@
-# Smart-Attendance-System-Using-RFID-and-Google-Sheet
+# Smart Attendance System Using RFID and Google Sheet
 
-The project is used to record the attendance of the student with the help of RFID and when the RFID is scanned the attendance will be recorded on Google-sheet via NodeMCU.
+## Intro
+- This project records student attendance using RFID technology.
+- When a student scans their RFID card, the attendance is automatically stored in a Google Sheet.
+- The system uses NodeMCU to read RFID data and send it to Google Sheets.
 
-Process:
+## Objective
+- To simplify the attendance process for teachers.
+- To reduce manual work and avoid human errors.
+- To create a fast, contactless, and automated attendance system.
 
-• Role is to record the attendance of the students and to make teachers work easy.
+## Process
+- The project works in **3 stages**:
 
-• The project consists of 3 stages –
+### 1. Reading RFID Data
+- NodeMCU is connected with an RFID reader.
+- When a student taps their RFID card, the device reads the unique ID.
+- The student details are matched with the RFID ID.
 
-1.	For reading the students detail into RFID with the help of NodeMCU.
-2.	For sending the data to the Google-sheet.
-3.	And the main Google-sheet code which records the attendance in sheet.
+### 2. Sending Data to Google Sheet
+- NodeMCU sends the scanned RFID data to a Google Apps Script URL.
+- The URL acts as an API endpoint.
+- The data is pushed to the Google Sheet in real-time.
+
+### 3. Google Sheet Script
+- Google Apps Script receives the data from NodeMCU.
+- The script identifies the student and marks attendance with the current date and time.
+- The sheet automatically updates whenever a new scan is received.
+
+## Features
+- Contactless attendance using RFID.
+- Real-time data entry into Google Sheets.
+- Easy for teachers to monitor attendance.
+- Reduces manual errors.
+- Low-cost and simple hardware setup.
+
+## Hardware Used
+- NodeMCU ESP8266  
+- RFID Reader (RC522)  
+- RFID Cards/Tags  
+- Jumper Wires  
+- Power Source  
+
+## Software/Tools Used
+- Arduino IDE  
+- Google Sheets  
+- Google Apps Script  
+- NodeMCU Libraries  
+
+## How to Run
+- Flash the NodeMCU code using Arduino IDE.
+- Configure Wi-Fi credentials in the code.
+- Deploy the Google Apps Script and also generate the sheet token to get the Web App URL.
+- Update the URL in the NodeMCU code.
+- Scan RFID cards to record attendance.
